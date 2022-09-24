@@ -1,0 +1,11 @@
+<article class="post has-background-grey-lighter">
+  <div class="title">
+    <a href="{{post_text}}" target="_blank">{{title}}</a>
+    <span>({{ post_text}})</span>
+  </div>
+  <div class="meta">
+    {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} 
+    |
+    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+  </div>
+</article>

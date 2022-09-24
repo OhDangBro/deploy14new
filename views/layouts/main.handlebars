@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Da Tech Blogg</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+</head>
+<section class="hero is-primary ">
+  <div class="hero-body">
+    <p class="title">
+      
+    </p>
+    <p class="subtitle has-text-centered">
+      Techblog!!!!!
+    </p>
+  </div>
+</section>
+
+<body class="has-background-grey-lighter">
+  <div class="wrapper">
+    <header>
+      <h1>
+        DA TECH BLOG
+      </h1>
+      <nav>
+        {{#if loggedIn}}
+        <a href="/dashboard" class="m-1">Dashboard</a>
+        <a href="/" class="m-1">Home</a>
+        <button id="logout" class="btn-no-style is-primary">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>  
+    </header>
+    <main>
+      {{{ body }}}
+    </main>
+    <footer>
+      Thanks for visiting!
+    </footer>
+  </div>
+  
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
